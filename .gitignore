@@ -1,0 +1,8 @@
+node_modules/
+web/dist/
+firmware/build-*/
+firmware/*.g3a
+.vercel/
+.env*
+!*.example
+work/
