@@ -281,7 +281,7 @@ export class Calculator {
       const bytes = new Uint8Array(await response.arrayBuffer());
       if ((await sha256(bytes)) !== release.sha256)
         throw new Error(
-          "El reproductor descargado no coincide con la firma de la release.",
+          "El reproductor descargado no coincide con el SHA-256 de la release.",
         );
       return this.writeVerified(
         this.snapshot?.app?.name || "CasioVideo.g3a",

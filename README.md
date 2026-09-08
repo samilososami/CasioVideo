@@ -122,7 +122,19 @@ tests/           Pruebas del formato y de las operaciones sobre archivos
 docs/            Especificación, comprobaciones y capturas
 ```
 
-El despliegue usa Vercel. El proxy únicamente sirve información y archivos públicos de nuestras releases, evitando problemas de CORS de GitHub. **Los vídeos se convierten en el cliente y nunca pasan por ese proxy.** La ruta del portfolio `/tools/casiovideo/` apunta a esta aplicación.
+El despliegue usa Vercel. El proxy únicamente sirve información y archivos públicos de nuestras releases, evitando problemas de CORS de GitHub. **Los vídeos se convierten en el cliente y nunca pasan por ese proxy.** El portfolio publica una copia versionada de este build y su función serverless bajo `/tools/casiovideo/`, sin desactivar la protección de los despliegues de Vercel.
+
+## La web
+
+Capturas reales del navegador, con archivos sintéticos de prueba y un volumen simulado para verificar las operaciones sin modificar una calculadora física. Las cifras de almacenamiento de estas capturas no representan el espacio libre de tu calculadora.
+
+![Biblioteca de CasioVideo](docs/images/library-desktop.png)
+
+![Conversor con deslizadores, miniatura y estimación de espacio](docs/images/converter-desktop.png)
+
+[Biblioteca en móvil](docs/images/library-mobile.png) · [Conversor en móvil](docs/images/converter-mobile.png) · [Pruebas y revisión de diseño](docs/verification.md).
+
+La conexión directa requiere un navegador que implemente `showDirectoryPicker` (normalmente Chrome/Edge de escritorio). Que el diseño se adapte al móvil **no significa** que el navegador móvil pueda escribir en una calculadora USB. La alternativa es convertir, descargar el CVID y copiarlo manualmente.
 
 ## Créditos
 

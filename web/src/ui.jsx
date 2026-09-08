@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useId, useRef } from "react";
 import { X, Play, LoaderCircle } from "lucide-react";
 export function Brand() {
   return (
@@ -10,6 +10,7 @@ export function Brand() {
 }
 export function Modal({ title, onClose, children, wide = false }) {
   const ref = useRef(null);
+  const titleId = useId();
   useEffect(() => {
     const d = ref.current;
     d.showModal();
@@ -18,6 +19,7 @@ export function Modal({ title, onClose, children, wide = false }) {
   return (
     <dialog
       ref={ref}
+      aria-labelledby={titleId}
       className={`modal ${wide ? "wide" : ""}`}
       onCancel={(e) => {
         e.preventDefault();
@@ -28,7 +30,7 @@ export function Modal({ title, onClose, children, wide = false }) {
       }}
     >
       <div className="modal-head">
-        <h2>{title}</h2>
+        <h2 id={titleId}>{title}</h2>
         {onClose && (
           <button className="icon-btn" onClick={onClose} aria-label="Cerrar">
             <X size={20} />
@@ -110,7 +112,9 @@ export function Slider({
         step="1"
         value={index}
         className={auto ? "auto-range" : ""}
-        style={{"--range-fill": `${index / Math.max(1,values.length - 1) * 100}%`}}
+        style={{
+          "--range-fill": `${(index / Math.max(1, values.length - 1)) * 100}%`,
+        }}
         aria-valuetext={auto ? "Automático" : format(values[index])}
         onChange={(e) => onChange(values[Number(e.target.value)])}
       />

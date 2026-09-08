@@ -108,10 +108,15 @@ export default function App() {
     active = useRef(false);
   async function loadRelease() {
     setReleaseError("");
-    try { setRelease(await releaseInfo()); }
-    catch (e) { setReleaseError(e.message); }
+    try {
+      setRelease(await releaseInfo());
+    } catch (e) {
+      setReleaseError(e.message);
+    }
   }
-  useEffect(() => { loadRelease(); }, []);
+  useEffect(() => {
+    loadRelease();
+  }, []);
   useEffect(() => {
     const guard = (e) => {
       if (active.current) {
@@ -197,7 +202,13 @@ export default function App() {
       } else {
         saveDownload(
           new Blob([result.bytes]),
-          `${args.title.normalize("NFKD").replace(/[^A-Za-z0-9 _-]/g, "").trim().slice(0, 26) || "video"}.cvid`,
+          `${
+            args.title
+              .normalize("NFKD")
+              .replace(/[^A-Za-z0-9 _-]/g, "")
+              .trim()
+              .slice(0, 26) || "video"
+          }.cvid`,
         );
         setNotice(
           "Vídeo convertido. Conecta la calculadora para cargarlo o copia el archivo a su raíz.",
@@ -283,6 +294,7 @@ export default function App() {
         </nav>
         <a
           className="github"
+          aria-label="GitHub"
           href="https://github.com/samilososami/CasioVideo"
           target="_blank"
           rel="noreferrer"

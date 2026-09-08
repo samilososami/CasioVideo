@@ -341,7 +341,7 @@ export default function Converter({
               <div className="progress-track">
                 <i
                   style={{
-                    width: `${Math.min(100, (estimated / free) * 100)}%`,
+                    width: `${free > 0 ? Math.min(100, (estimated / free) * 100) : 100}%`,
                   }}
                 />
               </div>

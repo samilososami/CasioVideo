@@ -6,3 +6,4 @@ firmware/*.g3a
 .env*
 !*.example
 work/
+.vercel

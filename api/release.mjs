@@ -19,14 +19,14 @@ async function latest() {
     sum = release.assets.find((a) => a.name === "SHA256SUMS");
   if (!file || !sum) throw new Error("Release sin archivos de instalación.");
   const checksumResponse = await fetch(sum.browser_download_url);
-  if (!checksumResponse.ok) throw new Error("No se pueden leer las firmas.");
+  if (!checksumResponse.ok) throw new Error("No se pueden leer los checksums.");
   const checksums = await checksumResponse.text(),
     line = checksums
       .split("\n")
       .find((l) => /\s\*?CasioVideo\.g3a\s*$/.test(l));
   const hash = line?.trim().split(/\s/)[0];
   if (!/^[a-f0-9]{64}$/i.test(hash || ""))
-    throw new Error("Firma SHA-256 no válida.");
+    throw new Error("Checksum SHA-256 no válido.");
   cache = {
     version: release.tag_name.replace(/^v/, ""),
     url: release.html_url,
