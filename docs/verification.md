@@ -31,6 +31,12 @@ Este doble existe únicamente en la sesión de pruebas: **no está incorporado a
 
 No se observaron errores ni advertencias de consola al terminar las operaciones del navegador. La compilación de producción se completó.
 
+## Publicación verificada
+
+El 9 de septiembre de 2026 se verificaron sin autenticación las rutas públicas `https://www.samilososami.com/tools/` y `https://www.samilososami.com/tools/casiovideo/`: ambas devuelven HTTP 200. También se abrió el directorio en el navegador, se comprobó el título **Mis herramientas** y se siguió su enlace hasta la aplicación, sin errores de consola.
+
+El endpoint público `.../tools/casiovideo/api/release` devuelve la versión 0.1.1. El `.g3a` servido por ese endpoint tiene SHA-256 `4959663bb5ffa77292ce9397187c5c7fb2b0a0c7d98cd205674eb56b17a075f9`, idéntico al add-in instalado y probado. La página principal del portfolio y el JavaScript de CasioVideo también devolvieron HTTP 200.
+
 ## Diseño: referencia frente a implementación
 
 Las imágenes de concepto de `images/concept-*.png` fueron generadas con ImageGen. Son referencias de diseño, no capturas de una aplicación ni pruebas de funcionamiento. El brief fue una herramienta de vídeo oscura y sobria, con tipografía clara, acento azul, biblioteca de miniaturas y conversión a dos columnas. El usuario pidió después sustituir los selectores por deslizadores.
