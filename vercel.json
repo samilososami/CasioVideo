@@ -5,11 +5,11 @@
   "buildCommand":"npm run build --prefix web",
   "outputDirectory":"web/dist",
   "rewrites":[
-    {"source":"/tools/casiovideo/api/:path*","destination":"/api/:path*"},
-    {"source":"/tools/casiovideo/assets/:path*","destination":"/assets/:path*"},
-    {"source":"/tools/casiovideo/fonts/:path*","destination":"/fonts/:path*"},
-    {"source":"/tools/casiovideo/play.svg","destination":"/play.svg"},
-    {"source":"/tools/casiovideo/:path*","destination":"/index.html"}
+    {"source":"/tools/casio/casiovideo/api/:path*","destination":"/api/:path*"},
+    {"source":"/tools/casio/casiovideo/assets/:path*","destination":"/assets/:path*"},
+    {"source":"/tools/casio/casiovideo/fonts/:path*","destination":"/fonts/:path*"},
+    {"source":"/tools/casio/casiovideo/play.svg","destination":"/play.svg"},
+    {"source":"/tools/casio/casiovideo/:path*","destination":"/index.html"}
   ],
   "headers":[{"source":"/(.*)","headers":[
     {"key":"X-Content-Type-Options","value":"nosniff"},

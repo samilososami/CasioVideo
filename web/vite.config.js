@@ -12,7 +12,7 @@ const releaseDev = {
 };
 export default defineConfig({
   plugins: [react(), releaseDev],
-  base: "/tools/casiovideo/",
+  base: "/tools/casio/casiovideo/",
   server: { port: 5178 },
   build: { target: "es2022" },
 });

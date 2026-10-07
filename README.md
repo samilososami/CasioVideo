@@ -2,7 +2,7 @@
 
 Un pequeño cine en una calculadora. Reproductor de vídeo para Casio fx-CG50, con una web que convierte, comprime y copia tus vídeos desde el navegador.
 
-[Abrir CasioVideo](https://samilososami.com/tools/casiovideo/) · [Descargar el reproductor](https://github.com/samilososami/CasioVideo/releases/latest) · [Cómo funciona el formato](docs/cvid-format.md)
+[Abrir CasioVideo](https://samilososami.com/tools/casio/casiovideo/) · [Descargar el reproductor](https://github.com/samilososami/CasioVideo/releases/latest) · [Cómo funciona el formato](docs/cvid-format.md)
 
 ## Compatibilidad
 
@@ -31,7 +31,7 @@ CASIO publica una resolución de **384 × 216** para el área habitual de trabaj
 
 1. Haz una copia de seguridad de los archivos de tu calculadora.
 2. Conéctala por USB y selecciona **almacenamiento USB**.
-3. Abre [la web](https://samilososami.com/tools/casiovideo/) en Chrome o Edge de escritorio. Pulsa **Conectar calculadora**, elige su carpeta principal —la que contiene `@MainMem` y los `.g3a`— y permite la escritura.
+3. Abre [la web](https://samilososami.com/tools/casio/casiovideo/) en Chrome o Edge de escritorio. Pulsa **Conectar calculadora**, elige su carpeta principal —la que contiene `@MainMem` y los `.g3a`— y permite la escritura.
 4. Si falta el reproductor, pulsa **Instalar reproductor**. También puedes copiar manualmente `CasioVideo.g3a` desde [Releases](https://github.com/samilososami/CasioVideo/releases).
 5. En **Convertir**, elige un vídeo compatible con tu navegador, ajusta su duración y calidad y pulsa **Cargar vídeo**. Espera a que termine la copia y su verificación.
 6. **Expulsa la unidad desde el sistema operativo** antes de desconectarla. Abre CasioVideo en el menú de la calculadora.
@@ -122,7 +122,7 @@ tests/           Pruebas del formato y de las operaciones sobre archivos
 docs/            Especificación, comprobaciones y capturas
 ```
 
-El despliegue usa Vercel. El proxy únicamente sirve información y archivos públicos de nuestras releases, evitando problemas de CORS de GitHub. **Los vídeos se convierten en el cliente y nunca pasan por ese proxy.** El portfolio publica una copia versionada de este build y su función serverless bajo `/tools/casiovideo/`, sin desactivar la protección de los despliegues de Vercel.
+El despliegue usa Vercel. El proxy únicamente sirve información y archivos públicos de nuestras releases, evitando problemas de CORS de GitHub. **Los vídeos se convierten en el cliente y nunca pasan por ese proxy.** El portfolio publica una copia versionada de este build y su función serverless bajo `/tools/casio/casiovideo/`, sin desactivar la protección de los despliegues de Vercel.
 
 ## La web
 
